@@ -1,44 +1,86 @@
 <?php
 
-    /**
-     * L'ancêtre.
-     */
-    class Mew {
-        public ?string $capacite1 = "Tonnerre";
-        public ?string $capacite2 = "Roulade";
 
-        public function crier(): void {
-            echo "Ya haaaaaa <br>";
+    class Vehicule {
+        public ?string $marque = null;
+        public ?string $couleur = null;
+        public int $nbRoues = 4;
+
+        public function demarrer():void {
+            echo "Le véhicuke démarre";
+        }
+     public function rouler():void {
+            echo "Le véhicuke roule";
+        }
+         public function freiner():void {
+            echo "Le véhicuke freine";
         }
     }
 
-    class Pikachu extends Mew {
-        public string $proprietaire = "Sacha";
-        public string $couleur = "Jaune";
+    class Voiture extends Vehicule {
 
-        public function sePresenter(): void {
-            echo "Pika! Je suis de couleur {$this->couleur} et mon propriétaire est {$this->proprietaire}. <br>";
-        }
     }
 
-    class Racaillou extends Mew {
-        public string $proprietaire = "Pierre";
-        public string $couleur = "Marron";
+    class Moto extends Vehicule {
 
-        public function sePresenter(): void {
-            echo "Racaillou! Je suis de couleur {$this->couleur} et mon propriétaire est {$this->proprietaire}.<br>";
-        }
     }
 
-    $r1 = new Racaillou();
-    $r1->sePresenter();
-    $r1->crier();
+    class Camion extends Vehicule {
 
-    echo "----------------------------------<br>";
+    }
 
-    $p1 = new Pikachu();
-    $p1->sePresenter();
-    $p1->crier();
+    $voiture1 = new Voiture();
+    $voiture1->demarrer();
+
+    echo "<br>";
+
+    $moto1 = new Voiture();
+    $moto1->rouler();
+
+    echo "<br>";
+
+    $camion1 = new Voiture();
+    $camion1->demarrer();
+
+    // /**
+    //  * L'ancêtre.
+    //  */
+    // class Mew {
+    //     public ?string $capacite1 = "Tonnerre";
+    //     public ?string $capacite2 = "Roulade";
+
+    //     public function crier(): void {
+    //         echo "Ya haaaaaa <br>";
+    //     }
+    // }
+
+    // class Pikachu extends Mew {
+    //     public string $proprietaire = "Sacha";
+    //     public string $couleur = "Jaune";
+
+    //     public function sePresenter(): void {
+    //         echo "Pika! Je suis de couleur {$this->couleur} et mon propriétaire est {$this->proprietaire}. <br>";
+    //     }
+    // }
+
+    // class Racaillou extends Mew {
+    //     public string $proprietaire = "Pierre";
+    //     public string $couleur = "Marron";
+
+    //     public function sePresenter(): void {
+    //         echo "Racaillou! Je suis de couleur {$this->couleur} et mon propriétaire est {$this->proprietaire}.<br>";
+    //     }
+    // }
+
+    // $r1 = new Racaillou();
+    // $r1->sePresenter();
+    // $r1->crier();
+
+    // echo "----------------------------------<br>";
+
+    // $p1 = new Pikachu();
+    // $p1->sePresenter();
+    // $p1->crier();
 
 
 // ----------------------------------------------------------
