@@ -1,46 +1,84 @@
 <?php
 
-
     class Vehicule {
         public ?string $marque = null;
         public ?string $couleur = null;
-        public int $nbRoues = 4;
+        public int $nbreRoues = 4;
 
-        public function demarrer():void {
-            echo "Le véhicuke démarre";
+        public function demarrer(): void {
+            echo "Le véhicule démarre";
         }
-     public function rouler():void {
-            echo "Le véhicuke roule";
+
+        public function rouler(): void {
+            echo "Le véhicule roule";
         }
-         public function freiner():void {
-            echo "Le véhicuke freine";
+
+        public function freiner(): void {
+            echo "Le véhicule freine";
         }
     }
 
     class Voiture extends Vehicule {
+        public function demarrer(): void {
+            echo "La voiture démarre";
+        }
 
+        public function rouler(): void {
+            echo "Le voiture roule";
+        }
+
+        public function freiner(): void {
+            echo "Le voiture freine";
+        }
     }
 
     class Moto extends Vehicule {
+        public function demarrer(): void {
+            echo "La moto démarre";
+        }
 
+        public function rouler(): void {
+            echo "Le moto roule";
+        }
+
+        public function freiner(): void {
+            echo "Le moto freine";
+        }
     }
 
     class Camion extends Vehicule {
+        public function demarrer(): void {
+            echo "Le camion démarre";
+        }
 
+        public function rouler(): void {
+            echo "Le camion roule";
+        }
+
+        public function freiner(): void {
+            echo "Le camion freine";
+        }
     }
 
     $voiture1 = new Voiture();
     $voiture1->demarrer();
 
     echo "<br>";
-
-    $moto1 = new Voiture();
+    
+    $moto1 = new Moto();
     $moto1->rouler();
-
+    
+    echo "<br>";
+    
+    $camion1 = new Camion();
+    $camion1->demarrer();
+    echo "<br>";
+    $camion1->rouler();
+    echo "<br>";
+    $camion1->freiner();
     echo "<br>";
 
-    $camion1 = new Voiture();
-    $camion1->demarrer();
+// ----------------------------------------------------------
 
     // /**
     //  * L'ancêtre.
